@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Template</title>
+    <!--<link rel="stylesheet" href="{% static 'styles.css' %}">-->
+    <link rel="stylesheet" href="{% static 'color.css' %}">
+</head>
+<body>
+<h1>Test Page using templating</h1>
+<p>Total from other function is {{total}}</p>
+<h3>Family Members</h3>
+<ul>
+
+    {% if flag %}
+        {% for person in people %}
+            <li>{{ person }}</li>
+        {% endfor %}
+    {% else %}
+     <p>No member identified</p>
+    {% endif %}
+
+</ul>
+</body>
+</html>
